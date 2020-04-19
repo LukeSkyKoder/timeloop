@@ -4,3 +4,4 @@ class ServiceExit(Exception):
     of all running threads and the main program.
     """
     pass
+

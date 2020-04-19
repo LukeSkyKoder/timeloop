@@ -1,6 +1,7 @@
 from threading import Thread, Event
 from datetime import timedelta
 
+
 class Job(Thread):
     def __init__(self, interval, execute, *args, **kwargs):
         Thread.__init__(self)
@@ -17,3 +18,4 @@ class Job(Thread):
     def run(self):
         while not self.stopped.wait(self.interval.total_seconds()):
             self.execute(*self.args, **self.kwargs)
+
